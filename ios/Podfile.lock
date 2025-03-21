@@ -1,0 +1,43 @@
+PODS:
+  - arkit_plugin (0.0.1):
+    - Flutter
+    - GLTFSceneKit
+  - Flutter (1.0.0)
+  - flutter_inappwebview (0.0.1):
+    - Flutter
+    - flutter_inappwebview/Core (= 0.0.1)
+    - OrderedSet (~> 5.0)
+  - flutter_inappwebview/Core (0.0.1):
+    - Flutter
+    - OrderedSet (~> 5.0)
+  - GLTFSceneKit (0.3.0)
+  - OrderedSet (5.0.0)
+
+DEPENDENCIES:
+  - arkit_plugin (from `.symlinks/plugins/arkit_plugin/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+
+SPEC REPOS:
+  trunk:
+    - GLTFSceneKit
+    - OrderedSet
+
+EXTERNAL SOURCES:
+  arkit_plugin:
+    :path: ".symlinks/plugins/arkit_plugin/ios"
+  Flutter:
+    :path: Flutter
+  flutter_inappwebview:
+    :path: ".symlinks/plugins/flutter_inappwebview/ios"
+
+SPEC CHECKSUMS:
+  arkit_plugin: 2c387e26e137de4bd1fc16ec2fabd05c84c5a817
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_inappwebview: 180a2f38c18dfbfb8f0c12f7bd42ce02dfd6c765
+  GLTFSceneKit: d1b437c514ba2aed5555afb0fddd64e030612d57
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
+
+PODFILE CHECKSUM: c62b84213ec803b8331ff7fbc54543ab371bfb9f
+
+COCOAPODS: 1.16.2
