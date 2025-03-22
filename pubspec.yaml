@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # webview_flutter: ^4.10.0
-  flutter_inappwebview: ^5.8.0
+  flutter_inappwebview: ^6.1.5
   arkit_plugin: ^1.0.8
   # url_launcher: ^6.3.1
 

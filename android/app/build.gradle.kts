@@ -6,9 +6,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.flutter_test_app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    namespace = "com.pichillilorenzo.flutter_inappwebview"
+    compileSdk = 34
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -37,6 +37,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+    buildToolsVersion = "34.0.0"
 }
 
 flutter {

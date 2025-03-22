@@ -56,9 +56,9 @@ class _WebViewScreenState extends State<WebViewScreen> {
       appBar: AppBar(title: Text('In-App WebView')),
       body: InAppWebView(
         initialUrlRequest: URLRequest(
-          url: Uri.parse('https://galerio.io/'),
+          url: WebUri('https://galerio.io/'), // Use WebUri here
           headers: {"Cache-Control": "max-age=3600, public"},
-          iosCachePolicy: IOSURLRequestCachePolicy.RETURN_CACHE_DATA_ELSE_LOAD
+          cachePolicy: URLRequestCachePolicy .RETURN_CACHE_DATA_ELSE_LOAD,
         ),
         onWebViewCreated: (controller) {
           webViewController = controller;
@@ -124,20 +124,16 @@ class _GalerioLoginWebViewState extends State<GalerioLoginWebView> {
     return Scaffold(
       //appBar: AppBar(title: Text("Galerio Login")),
       body: InAppWebView(
-        initialUrlRequest: URLRequest(url: Uri.parse("https://galerio.io/")),
-        initialOptions: InAppWebViewGroupOptions(
-          crossPlatform: InAppWebViewOptions(
-            javaScriptEnabled: true,
-            userAgent:
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-            useShouldOverrideUrlLoading: true,
-          ),
-          ios: IOSInAppWebViewOptions(
-            allowsInlineMediaPlayback: true,
-            sharedCookiesEnabled: true,
-            allowsBackForwardNavigationGestures: true,
-            enableViewportScale: true,
-          ),
+        initialUrlRequest: URLRequest(url: WebUri("https://galerio.io/")), // Use WebUri
+        initialSettings: InAppWebViewSettings( // Changed to initialSettings
+          javaScriptEnabled: true,
+          userAgent:
+              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+          useShouldOverrideUrlLoading: true,
+          allowsInlineMediaPlayback: true, // Moved here from ios options
+          sharedCookiesEnabled: true, // Moved here from ios options
+          allowsBackForwardNavigationGestures: true, // Moved here from ios options
+          enableViewportScale: true, // Moved here from ios options
         ),
         onWebViewCreated: (controller) {
           _webViewController = controller;
